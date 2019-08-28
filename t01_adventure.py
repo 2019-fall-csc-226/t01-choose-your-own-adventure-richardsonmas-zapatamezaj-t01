@@ -67,7 +67,39 @@ if dead == True:
 
 #########################################################################################################
 # TODO Add your part of the story here. Keep in mind you may NOT be coming right after the example above.
+print("You come upon three doors.")
+sleep(delay * 2)
+print("The one of the left has a light glowing from underneath.")
+sleep(delay * 4)
+print("The one in the middle looks old and cracked.")
+sleep(delay * 4)
+print("The one on the right is made of rusted metal.")
 
+direction = input("Which door will you choose? [Left, Middle, Right]")
+if direction.lower() == "right":
+    # good choice
+    print("You can barely see because the room is so dark and dusty. \nYou light your torch and see the room is filled to the brim with gold and jewels!.")
+    sleep(delay * 4)
+    print("Congratulations, you're rich!")
+elif direction.lower() == "left":
+    # worst choice
+    print("You step through the door onto a thin sheet of ice. Below the ice, electricity arcs from one electric eel to another.\nYou turn quickly to walk back out the door but...")
+    sleep(delay * 4)
+    print("The ice breaks! You are electrocuted while you are drowned... ")
+    dead = True
+else:
+    # boring choice
+    print("You open the middle door. Behind the door you find a long passage with stairs that seem to go up forever.")
+    sleep(delay * 2)
+    print("...")
+    sleep(delay * 2)
+    print("....")
+    sleep(delay * 2)
+    print(".....")
+    sleep(delay * 2)
+    print("You realize this tunnel is leading to nowhere and close your eyes, wishing for an escape.")
+    sleep(delay)
+    print("You open your eyes and you are in a new place. You are alive, but somewhat bored and disappointed. ")
 
 
 # TODO Don't forget to check if your user is dead at the end of your chapter!
