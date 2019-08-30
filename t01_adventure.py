@@ -85,11 +85,17 @@ if direction.lower() == "right":
 
 elif direction.lower() == "left":
     # worst choice
-    print("You step through the door onto a thin sheet of ice. Below the ice, electricity arcs from one electric eel to another.\nYou turn quickly to walk back out the door but...")
-    sleep(delay * 4)
-    print("The ice breaks! You are electrocuted while you are drowned... ")
-    dead = True
-    choice =1
+    print("You step through the door onto a thin sheet of ice. Below the ice, electricity arcs from one electric eel to another.\nYou turn quickly to walk back out the door and...")
+    sleep(delay * 3)
+    print("A golden dragon appears, he offers to help if and only if you can guess a number between 1 to 10")
+    number = int(input("What number do you choose?"))
+    if number >= 6:
+        print("He offers you a ride to safety, you come out with no major injuries.")
+        choice = 2
+    else:
+        print("The ice breaks! You are electrocuted while you are drowned... ")
+        dead = True
+        choice =1
 else:
     # boring choice
     print("You open the middle door. Behind the door you find a long passage with stairs that seem to go up forever.")
@@ -112,6 +118,7 @@ elif choice == 1:
     print("You die, try again to test your fate again!")
 else:
     print("You open your eyes and you are in a new place. You are alive, but somewhat bored and disappointed.")
+
 
 #########################################################################################################
 
