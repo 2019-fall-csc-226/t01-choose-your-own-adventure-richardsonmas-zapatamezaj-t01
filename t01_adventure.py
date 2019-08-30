@@ -81,12 +81,15 @@ if direction.lower() == "right":
     print("You can barely see because the room is so dark and dusty. \nYou light your torch and see the room is filled to the brim with gold and jewels!.")
     sleep(delay * 4)
     print("Congratulations, you're rich!")
+    choice = 0
+
 elif direction.lower() == "left":
     # worst choice
     print("You step through the door onto a thin sheet of ice. Below the ice, electricity arcs from one electric eel to another.\nYou turn quickly to walk back out the door but...")
     sleep(delay * 4)
     print("The ice breaks! You are electrocuted while you are drowned... ")
     dead = True
+    choice =1
 else:
     # boring choice
     print("You open the middle door. Behind the door you find a long passage with stairs that seem to go up forever.")
@@ -99,16 +102,21 @@ else:
     sleep(delay * 2)
     print("You realize this tunnel is leading to nowhere and close your eyes, wishing for an escape.")
     sleep(delay)
-    print("You open your eyes and you are in a new place. You are alive, but somewhat bored and disappointed. ")
+    choice = 2
 
 
 # TODO Don't forget to check if your user is dead at the end of your chapter!
-
+if choice == 0:
+    print("You collect your treasure and you move on to the next part of the cave")
+elif choice == 1:
+    print("You die, try again to test your fate again!")
+else:
+    print("You open your eyes and you are in a new place. You are alive, but somewhat bored and disappointed.")
 
 #########################################################################################################
 
 # The following is the end of the story. Don't change this section, unless you really want to
 # (though it may not be used in the final story. Or will it...)
-print("Look at that! You made it to the end of the story without dying! ")
-print("Congratulations... now go play again and find an interesting way to perish. ")
-print("Try again by hitting the green play button.")
+#print("Look at that! You made it to the end of the story without dying! ")
+#print("Congratulations... now go play again and find an interesting way to perish. ")
+#print("Try again by hitting the green play button.")
